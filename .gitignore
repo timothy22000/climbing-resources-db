@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Local Claude / IDE state
+.claude/
+.reliability-mode
+.vscode/
+.idea/
+
+# URL-checker output
+url_report.md
+
+# Build / packaging artefacts
+dist/
+build/

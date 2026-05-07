@@ -1,0 +1,66 @@
+name: Validate & Export
+
+on:
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'source/**'
+      - 'scripts/**'
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/**'
+      - 'source/**'
+
+jobs:
+  validate:
+    name: Schema Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas pyarrow openpyxl
+
+      - name: Run schema validation
+        run: python scripts/validate.py
+
+      - name: Check row counts are consistent across per-type CSVs
+        run: |
+          python - <<'EOF'
+          import pandas as pd, sys
+          all_df  = pd.read_csv("data/all_resources.csv")
+          total   = len(all_df)
+          partial = sum(
+              len(pd.read_csv(f"data/{f}.csv"))
+              for f in ["books","youtube","courses","websites","podcasts"]
+          )
+          if total != partial:
+              print(f"ERROR: all_resources.csv has {total} rows but per-type CSVs sum to {partial}")
+              sys.exit(1)
+          print(f"Row counts consistent: {total} total")
+          EOF
+
+      - name: Verify Parquet matches CSV
+        run: |
+          python - <<'EOF'
+          import pandas as pd, sys
+          csv = pd.read_csv("data/all_resources.csv")
+          pq  = pd.read_parquet("data/all_resources.parquet")
+          if len(csv) != len(pq):
+              print(f"ERROR: CSV has {len(csv)} rows, Parquet has {len(pq)}")
+              sys.exit(1)
+          print(f"Parquet consistent with CSV: {len(pq)} rows")
+          EOF
+
+      - name: Post validation summary
+        if: always()
+        run: echo "Validation complete."
