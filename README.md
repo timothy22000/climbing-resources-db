@@ -27,8 +27,7 @@ tags:
   - curated-dataset
 configs:
   - config_name: default
-    data_files:
-      - path: data/all_resources.parquet
+    data_files: data/all_resources.parquet
 dataset_info:
   features:
     - name: resource_id

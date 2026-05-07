@@ -112,9 +112,14 @@ def main() -> None:
     out_dir = pathlib.Path(args.out)
 
     if not source.exists():
-        raise FileNotFoundError(f"Source file not found: {source}")
+        # The XLSX is the optional master spreadsheet. Until it is added to the
+        # repo, the CSVs in data/ are edited directly and remain the source of
+        # truth, so there is nothing to regenerate. Exit successfully so both
+        # scheduled runs and manual workflow_dispatch handle this cleanly.
+        print(f"No XLSX at {source}; skipping export (CSVs in data/ are the source of truth).")
+        return
 
-    print(f"Exporting {source} → {out_dir}/")
+    print(f"Exporting {source} -> {out_dir}/")
     export(source, out_dir)
     print("Done.")
 
