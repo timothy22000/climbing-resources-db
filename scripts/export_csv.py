@@ -67,12 +67,37 @@ def export(source: pathlib.Path, out_dir: pathlib.Path) -> None:
 
     # Parquet - apply types
     typed = all_df.copy()
-    typed["year"]     = pd.to_numeric(typed["year"], errors="coerce").astype("Int64")
+    typed["year"]      = pd.to_numeric(typed["year"], errors="coerce").astype("Int64")
     typed["price_usd"] = pd.to_numeric(typed["price_usd"], errors="coerce").astype("float32")
-    typed["is_free"]  = typed["is_free"].map({"True": True, "False": False, "TRUE": True, "FALSE": False})
+    typed["is_free"]   = typed["is_free"].map({
+        "True": True, "False": False, "TRUE": True, "FALSE": False, "true": True, "false": False
+    })
+
+    # Explicit Arrow schema avoids `large_string` (which the HF dataset viewer
+    # sometimes rejects) and pins `year` to int64 to match the YAML dataset card.
+    schema = pa.schema([
+        ("resource_id",     pa.string()),
+        ("resource_type",   pa.string()),
+        ("title",           pa.string()),
+        ("creator",         pa.string()),
+        ("year",            pa.int64()),
+        ("disciplines",     pa.string()),
+        ("technique_tags",  pa.string()),
+        ("skill_level_min", pa.string()),
+        ("skill_level_max", pa.string()),
+        ("is_free",         pa.bool_()),
+        ("price_usd",       pa.float32()),
+        ("url",             pa.string()),
+        ("isbn",            pa.string()),
+        ("language",        pa.string()),
+        ("country",         pa.string()),
+        ("description",     pa.string()),
+        ("date_added",      pa.string()),
+        ("last_verified",   pa.string()),
+    ])
 
     pq_path = out_dir / "all_resources.parquet"
-    table = pa.Table.from_pandas(typed, preserve_index=False)
+    table = pa.Table.from_pandas(typed, schema=schema, preserve_index=False)
     pq.write_table(table, pq_path, compression="snappy")
     print(f"  ✓ {pq_path}  (snappy-compressed)")
 

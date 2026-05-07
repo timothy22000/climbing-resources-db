@@ -25,6 +25,10 @@ tags:
   - courses
   - podcasts
   - curated-dataset
+configs:
+  - config_name: default
+    data_files:
+      - path: data/all_resources.parquet
 dataset_info:
   features:
     - name: resource_id
@@ -36,7 +40,7 @@ dataset_info:
     - name: creator
       dtype: string
     - name: year
-      dtype: int32
+      dtype: int64
     - name: disciplines
       dtype: string
     - name: technique_tags
@@ -63,9 +67,6 @@ dataset_info:
       dtype: string
     - name: last_verified
       dtype: string
-  splits:
-    - name: train
-      num_examples: 114
 ---
 
 # Climbing Movement & Technique Resources
