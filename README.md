@@ -244,6 +244,21 @@ df = ds["train"].to_pandas()
 
 ---
 
+## Source Data
+
+The canonical source of this dataset is the GitHub repository at **[github.com/timothy22000/climbing-resources-db](https://github.com/timothy22000/climbing-resources-db)**. All edits, additions, and corrections happen there via pull request, with schema validation and weekly URL health checks running automatically. The dataset on HuggingFace is published as a downstream mirror, refreshed alongside each tagged GitHub release.
+
+**Data flow:** edits land on the GitHub `main` branch, the `validate-pr.yml` workflow checks schema conformance, and the `data/all_resources.parquet` file (regenerated from the master CSV) is then uploaded to this HuggingFace repo. The CSV under `data/` on GitHub is always the source of truth for the Parquet here.
+
+**To contribute, file an issue, or report a broken link:**
+
+- Submit a pull request: [github.com/timothy22000/climbing-resources-db](https://github.com/timothy22000/climbing-resources-db) (see [CONTRIBUTING.md](https://github.com/timothy22000/climbing-resources-db/blob/main/CONTRIBUTING.md))
+- Suggest a new resource: [add_resource issue template](https://github.com/timothy22000/climbing-resources-db/issues/new?template=add_resource.md)
+- Fix incorrect data: [fix_data issue template](https://github.com/timothy22000/climbing-resources-db/issues/new?template=fix_data.md)
+- Browse version history: [CHANGELOG.md](https://github.com/timothy22000/climbing-resources-db/blob/main/CHANGELOG.md)
+
+---
+
 ## Data Quality & Verification
 
 All 30 book ISBNs were manually verified against Amazon, AbeBooks, publisher websites, and library catalogues. During the initial verification pass: 13 ISBNs were corrected (the Climbing Bible series had systematic ISBN errors; several Falcon Guides had wrong edition numbers), and 6 entries were removed as unverifiable or fabricated. YouTube channels and podcasts were verified as active; online courses were confirmed available on their respective platforms. URL health checks run automatically on a weekly schedule.
