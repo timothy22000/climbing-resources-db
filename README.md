@@ -70,11 +70,6 @@ dataset_info:
 
 # Climbing Movement & Technique Resources
 
-- **Homepage:** https://github.com/timothy22000/climbing-resources-db
-- **Repository:** https://github.com/timothy22000/climbing-resources-db
-- **Point of Contact:** [@timothy22000](https://github.com/timothy22000)
-- **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Validate & Export](https://github.com/timothy22000/climbing-resources-db/actions/workflows/validate-pr.yml/badge.svg)](https://github.com/timothy22000/climbing-resources-db/actions/workflows/validate-pr.yml)
 [![URL Health](https://github.com/timothy22000/climbing-resources-db/actions/workflows/url-checker.yml/badge.svg)](https://github.com/timothy22000/climbing-resources-db/actions/workflows/url-checker.yml)
@@ -82,6 +77,15 @@ dataset_info:
 A curated, open-source database of **114 resources** covering books, YouTube channels, online courses, websites/blogs, and podcasts, focused on **rock climbing movement and technique**. Every entry has been manually selected and verified, with book ISBNs cross-referenced against Amazon, AbeBooks, and publisher catalogues.
 
 Covers all major disciplines: sport/lead, bouldering, trad, and top rope. Skill levels span complete beginner to elite. Every entry carries a 33-topic technique taxonomy so you can filter precisely for what you need.
+
+## Dataset Description
+
+- **Repository:** [`timothy22000/climbing-resources-db`](https://github.com/timothy22000/climbing-resources-db)
+- **Point of Contact:** [@timothy22000](https://github.com/timothy22000)
+- **Total resources:** 114 (30 books, 25 YouTube channels, 20 courses, 20 websites, 19 podcasts)
+- **Schema:** 18 fields, controlled vocabularies for `resource_type`, `disciplines`, `skill_level_min`/`max`
+- **Technique taxonomy:** 33 tags across movement, hold shapes, grip variants, orientations, terrain, training, and mental skills
+- **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 
