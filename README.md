@@ -78,6 +78,11 @@ A curated, open-source database of **114 resources** covering books, YouTube cha
 
 Covers all major disciplines: sport/lead, bouldering, trad, and top rope. Skill levels span complete beginner to elite. Every entry carries a 33-topic technique taxonomy so you can filter precisely for what you need.
 
+- **Source repository:** https://github.com/timothy22000/climbing-resources-db (canonical; PRs, issues, and CI live here)
+- **HuggingFace mirror:** https://huggingface.co/datasets/t22000t/climbing-resources-db (updated alongside each GitHub release)
+- **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- **Maintainer:** [@timothy22000](https://github.com/timothy22000)
+
 ---
 
 ## Why I built this
