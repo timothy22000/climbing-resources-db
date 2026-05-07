@@ -80,18 +80,22 @@ Covers all major disciplines: sport/lead, bouldering, trad, and top rope. Skill 
 
 ---
 
+## Why I built this
+
+I wanted one place to search for climbing resources. Recommendations for specific techniques (heel hooks, drop knees, crack jamming) were scattered across YouTube comments, gym chat, and Reddit threads, with nothing I could actually filter or query. So I built it: a single tagged file I can grep to find every resource that matches what I'm working on right now.
+
+---
+
 ## At a Glance
 
-| Category | Count | Free |
-|---|:---:|:---:|
-| Books | 30 | n/a |
-| YouTube Channels | 25 | 25 |
-| Online Courses | 20 | 1 |
-| Websites & Blogs | 20 | 10 |
-| Podcasts | 19 | 17 |
-| **Total** | **114** | **53** |
-
-Publication span (books): 1993 – 2024.
+| Category          |  Count | Free | % Free | Notes                                                    |
+| :---------------- | -----: | :--: | :----: | :------------------------------------------------------- |
+| Books             |     30 |  n/a |   n/a  | Publication span 1993 to 2024; every ISBN-13 verified    |
+| YouTube channels  |     25 |   25 |  100%  | All verified active                                      |
+| Online courses    |     20 |    1 |    5%  | Altitude Climbing, TrainingBeta, Power Company, et al.   |
+| Websites & blogs  |     20 |   10 |   50%  | Mix of free articles and paid training programmes        |
+| Podcasts          |     19 |   17 |   89%  | Verified on Spotify                                      |
+| **Total**         | **114** | **53** | **46%** |                                                       |
 
 ---
 
