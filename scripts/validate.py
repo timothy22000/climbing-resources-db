@@ -28,8 +28,13 @@ TECHNIQUE_TAGS = {
     # Movement positions & body mechanics
     "footwork", "hip_rotation", "drop_knee", "flagging", "heel_hooks",
     "toe_hooks", "knee_bars",
-    # Hold types
+    # Hold shapes
     "crimp_grip", "slopers", "pinches", "underclings",
+    "jugs", "pockets", "edges",
+    # Grip variants (crimp sub-types)
+    "half_crimp", "full_crimp", "finger_drag",
+    # Hold orientations
+    "gastons", "side_pulls",
     # Route / terrain types
     "slab", "overhang", "crack_climbing", "offwidth",
     # Movement quality

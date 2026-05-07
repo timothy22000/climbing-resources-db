@@ -110,9 +110,9 @@ Pipe-separated combination of: `sport` · `bouldering` · `trad` · `top_rope` �
 Use `all` only when the resource covers all four disciplines equally. Otherwise list the specific disciplines. Example: `sport|bouldering`.
 
 ### `technique_tags`
-Pipe-separated tags chosen from the 25-topic taxonomy:
+Pipe-separated tags chosen from the 33-topic taxonomy:
 
-`footwork` · `hip_rotation` · `drop_knee` · `flagging` · `heel_hooks` · `toe_hooks` · `knee_bars` · `crimp_grip` · `slopers` · `pinches` · `underclings` · `slab` · `overhang` · `crack_climbing` · `offwidth` · `dynamic_movement` · `route_reading` · `strength` · `gear_placement` · `anchors` · `finger_training` · `periodization` · `mental_game` · `lead_falling` · `injury_rehab`
+`footwork` · `hip_rotation` · `drop_knee` · `flagging` · `heel_hooks` · `toe_hooks` · `knee_bars` · `crimp_grip` · `slopers` · `pinches` · `underclings` · `jugs` · `pockets` · `edges` · `half_crimp` · `full_crimp` · `finger_drag` · `gastons` · `side_pulls` · `slab` · `overhang` · `crack_climbing` · `offwidth` · `dynamic_movement` · `route_reading` · `strength` · `gear_placement` · `anchors` · `finger_training` · `periodization` · `mental_game` · `lead_falling` · `injury_rehab`
 
 Add at least 2 and at most 10 tags per resource. Do not invent new tags; open an issue to propose an extension to the taxonomy if a topic is missing.
 

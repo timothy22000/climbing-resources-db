@@ -60,9 +60,27 @@ During ISBN verification against Amazon, AbeBooks, and publisher catalogues, 13 
 
 ---
 
+## [1.1.0] 2026-05-07
+
+### Added
+
+**Technique taxonomy expanded from 25 to 33 tags.** Eight new tags added:
+
+- **Hold shapes:** `jugs` (large positive holds), `pockets` (one/two/three-finger pockets), `edges` (small flat positive holds, distinct from crimps).
+- **Grip variants (crimp sub-types):** `half_crimp`, `full_crimp`, `finger_drag`. Used for resources that distinguish grip mechanics, common in finger-training and physiology literature.
+- **Hold orientations:** `gastons` (pulling outward), `side_pulls`. Match the orientation pattern of the existing `underclings` tag.
+
+The change is backwards compatible: every existing tag still validates. Existing rows have been retagged where the resource clearly covers the new topic; rows are conservative additions only.
+
+### Changed
+
+- `scripts/validate.py`, `README.md` taxonomy section, `CONTRIBUTING.md` tag list, `CLAUDE.md` count reference all updated together.
+
+---
+
 ## [Unreleased]
 
-Planned for v1.1.0:
+Planned for v1.2.0:
 - Add non-English resources (French, German, Spanish).
 - Add mobile app category (Crimpd, Mountain Project app, 8a.nu).
 - Expand podcast coverage for non-English speaking markets.

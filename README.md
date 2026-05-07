@@ -76,7 +76,7 @@ dataset_info:
 
 A curated, open-source database of **114 resources** covering books, YouTube channels, online courses, websites/blogs, and podcasts, focused on **rock climbing movement and technique**. Every entry has been manually selected and verified, with book ISBNs cross-referenced against Amazon, AbeBooks, and publisher catalogues.
 
-Covers all major disciplines: sport/lead, bouldering, trad, and top rope. Skill levels span complete beginner to elite. Every entry carries a 25-topic technique taxonomy so you can filter precisely for what you need.
+Covers all major disciplines: sport/lead, bouldering, trad, and top rope. Skill levels span complete beginner to elite. Every entry carries a 33-topic technique taxonomy so you can filter precisely for what you need.
 
 ---
 
@@ -124,13 +124,19 @@ Each row in `all_resources.csv` / `all_resources.parquet` contains 18 fields:
 | `date_added` | string | ISO 8601 date the entry was added |
 | `last_verified` | string | ISO 8601 date the entry was last checked |
 
-### Technique Tag Taxonomy (25 topics)
+### Technique Tag Taxonomy (33 topics)
 
 **Movement positions & body mechanics:**
 `footwork` · `hip_rotation` · `drop_knee` · `flagging` · `heel_hooks` · `toe_hooks` · `knee_bars`
 
-**Hold types:**
-`crimp_grip` · `slopers` · `pinches` · `underclings`
+**Hold shapes:**
+`crimp_grip` · `slopers` · `pinches` · `underclings` · `jugs` · `pockets` · `edges`
+
+**Grip variants (crimp sub-types):**
+`half_crimp` · `full_crimp` · `finger_drag`
+
+**Hold orientations:**
+`gastons` · `side_pulls`
 
 **Route / terrain types:**
 `slab` · `overhang` · `crack_climbing` · `offwidth`
