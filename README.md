@@ -82,10 +82,9 @@ Covers all major disciplines: sport/lead, bouldering, trad, and top rope. Skill 
 
 - **Repository:** [`timothy22000/climbing-resources-db`](https://github.com/timothy22000/climbing-resources-db)
 - **Point of Contact:** [@timothy22000](https://github.com/timothy22000)
-- **Total resources:** 114 (30 books, 25 YouTube channels, 20 courses, 20 websites, 19 podcasts)
-- **Schema:** 18 fields, controlled vocabularies for `resource_type`, `disciplines`, `skill_level_min`/`max`
-- **Technique taxonomy:** 33 tags across movement, hold shapes, grip variants, orientations, terrain, training, and mental skills
-- **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- **Resource count:** 114 (30 books, 25 YouTube channels, 20 courses, 20 websites, 19 podcasts)
+- **Schema fields:** 18, with controlled vocabularies for resource type, disciplines, and skill level
+- **Technique tags:** 33 across movement, hold shapes, grip variants, orientations, terrain, training, and mental skills
 
 ---
 
