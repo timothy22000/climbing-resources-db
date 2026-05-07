@@ -86,6 +86,19 @@ I wanted one place to search for climbing resources. Recommendations for specifi
 
 ---
 
+## At a Glance
+
+| Category          |  Count | Free | % Free | Notes                                                    |
+| :---------------- | -----: | :--: | :----: | :------------------------------------------------------- |
+| Books             |     30 |  n/a |   n/a  | Publication span 1993 to 2024; every ISBN-13 verified    |
+| YouTube channels  |     25 |   25 |  100%  | All verified active                                      |
+| Online courses    |     20 |    1 |    5%  | Altitude Climbing, TrainingBeta, Power Company, et al.   |
+| Websites & blogs  |     20 |   10 |   50%  | Mix of free articles and paid training programmes        |
+| Podcasts          |     19 |   17 |   89%  | Verified on Spotify                                      |
+| **Total**         | **114** | **53** | **46%** |                                                       |
+
+---
+
 ## Schema
 
 Each row in `all_resources.csv` / `all_resources.parquet` contains 18 fields:
